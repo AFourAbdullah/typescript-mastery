@@ -128,3 +128,27 @@
 //     return a + b;
 //   },
 // };
+
+//*********************FUNCTIONs***********************/
+// type FUNCTYPE = (n: number, m: number, l?: number) => number;
+// const func: FUNCTYPE = (n, m, l) => {
+//   if (typeof l == "undefined") return n * m;
+//   return n * m * l;
+// };
+// func(1, 2);
+// func(1, 2, 2);
+
+// //we can give default value to variable
+// type FUNCTYPE = (n: number, m: number, l: number) => number;
+// const func: FUNCTYPE = (n, m, l = 20) => {
+//   if (typeof l == "undefined") return n * m;
+//   return n * m * l;
+// };
+// func(1, 2, 2);
+
+//if we don't define type
+// const func = (n: number, m: number, l: number = 20) => {
+//   if (typeof l == "undefined") return n * m;
+//   return n * m * l;
+// };-->if we dont define return type it will automatically detect it
+// func(1, 22, 3);
