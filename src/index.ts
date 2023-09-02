@@ -165,3 +165,8 @@
 //   return n;
 // };-->this will return number array and on n we can access array methods
 // func(1, 22, 3, 3, 23, 245, 234534, 3246);
+
+// type FUNCTYPE = (...n: number[]) => number;
+// const f1:FUNCTYPE=function(n:number){
+//     return n
+// }
