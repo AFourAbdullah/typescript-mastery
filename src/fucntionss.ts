@@ -54,3 +54,17 @@
 // const f1:FUNCTYPE=function(n:number){
 //     return n
 // }
+
+const heros = ["ironman", "batman"];
+heros.map((hero): string => {
+  return `hero is ${hero}`;
+});
+
+function consoleError(errMSg: string) {
+  console.log(errMSg);
+}
+
+//some functions never return a value
+function throwError(errMSg: string): never {
+  throw new Error(errMSg);
+}
