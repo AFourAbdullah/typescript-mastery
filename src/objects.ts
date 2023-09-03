@@ -34,6 +34,7 @@ type createProductFunc = (product: {
 }) => void;
 
 interface Course {
+  readonly id: string;
   name: string;
   price: number;
 }
@@ -41,8 +42,14 @@ interface Course {
 type createCourseFunc = (course: Course) => Course;
 
 const createCourse: createCourseFunc = (course) => {
+  course.name = "default course";
+  // course.id="sdfsd"-->it will give error b/c id is readonly
   console.log(course);
   return course;
 };
 
-createCourse({ name: "ts basics", price: 200 });
+createCourse({ id: "c1", name: "ts basics", price: 200 });
+
+type ThemeMode = "light" | "dark";
+const theme: ThemeMode = "dark";
+// const theme2: ThemeMode = "dad";--> it will give errror
