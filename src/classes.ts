@@ -20,6 +20,18 @@ class Student {
     this.weight = weight;
     this.rollNum = rollNum;
   }
+  myRoll = () => {
+    return this.rollNum;
+  };
 }
 let s1 = new Student(6, 55, 59);
 // console.log(s1.rollNum) -->it will give eror for accessing private properties which is only accessible inside class
+console.log(s1.myRoll());
+
+///there is much shorter syntax for making classes in ts
+class Animal {
+  constructor(public name: string, private weight: number) {}
+}
+
+let a1 = new Animal("Lion", 55);
+console.log(a1.name);
